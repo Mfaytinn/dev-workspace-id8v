@@ -1,0 +1,16 @@
+Dataset,Interval,Held-out sensor,Reference coverage,Held-out sensor coverage,Width
+Toy,Oracle Split Conformal,—,0.8005 ± 0.0000,—,4.4458 ± 0.0227
+Toy,Held-Out Raw Sensor CP,sensor_0,0.9292 ± 0.0008,0.7998 ± 0.0004,8.6338 ± 0.0531
+Toy,Held-Out Raw Sensor CP,sensor_1,0.9995 ± 0.0000,0.8004 ± 0.0006,14.6887 ± 0.0441
+Toy,Held-Out Raw Sensor CP,sensor_2,1.0000 ± 0.0000,0.8003 ± 0.0003,19.3675 ± 0.0483
+Toy,Fused Posterior Predictive,—,0.7851 ± 0.0023,—,4.2994 ± 0.0063
+SensEURCity,Oracle Split Conformal,—,0.8544 ± 0.0162,—,16.2470 ± 1.3845
+SensEURCity,Held-Out Raw Sensor CP,OPCN3PM25,0.9133 ± 0.0157,0.7333 ± 0.0209,22.6198 ± 0.5757
+SensEURCity,Held-Out Raw Sensor CP,5325CAT,0.8710 ± 0.0457,0.7971 ± 0.0064,18.6114 ± 1.7622
+SensEURCity,Held-Out Raw Sensor CP,5325CST,0.8629 ± 0.0636,0.7695 ± 0.0271,21.5920 ± 1.3499
+SensEURCity,Fused Posterior Predictive,—,0.9032 ± 0.0158,—,18.0059 ± 1.5349
+CAIRSENSE,Oracle Split Conformal,—,0.8458 ± 0.0233,—,9.4416 ± 0.5999
+CAIRSENSE,Held-Out Raw Sensor CP,AirAssure1,0.9814 ± 0.0031,0.7402 ± 0.0047,15.1581 ± 0.8854
+CAIRSENSE,Held-Out Raw Sensor CP,AirAssure2,0.8230 ± 0.0280,0.7785 ± 0.0090,10.5908 ± 1.2539
+CAIRSENSE,Held-Out Raw Sensor CP,AirAssure3,0.7650 ± 0.0637,0.7236 ± 0.0493,9.2496 ± 1.2443
+CAIRSENSE,Fused Posterior Predictive,—,0.9555 ± 0.0109,—,12.0407 ± 0.8094

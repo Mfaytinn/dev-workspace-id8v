@@ -1,0 +1,16 @@
+veli:
+  latent_z: 1
+  hidden_dim: 32
+  epochs: 120
+  lr: 1.0e-4
+  batch_size: 64
+  predict_samples: 1
+  beta_z: 10.0
+  beta_y: 0.1
+  recon_factor: 1.0
+  warmup: 0
+  optimizer_step_size: 40
+  optimizer_gamma: 0.5
+  reorder_probability: 0.5
+  clip_gradient: true
+  no_relu: false

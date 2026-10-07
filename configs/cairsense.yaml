@@ -1,0 +1,57 @@
+data_path: data/cairsense_preprocessed.xlsx
+sensor_only_train: true
+obs_transform: log
+point_prediction_summary: median
+model: anchored
+offset_parameterization: mean_residual
+anchor_idx: 2
+anchor_sensor: AirAssure3
+seed: 42
+epochs: 400
+patience: 0
+batch_size: 64
+shuffle_train: true
+lr: 0.0002
+weight_decay: 0.0
+warmup_epochs: 10
+scheduler_min_lr: 1.0e-07
+grad_clip_norm: 1.0
+var_reg_weight: 1.0
+refit_on_train_val: false
+selection_metric: val_nll
+hidden_dim: 4
+prior_hidden_dim: 4
+rel_hidden_dim: 4
+bias_hidden_dim: 2
+alpha: 0.2
+conformal_block_size: 1
+sigma_y: 0.001
+block_size_days: 7
+gap_hours: 36
+temporal_features: false
+evaluation_protocol: calendar
+veli:
+  latent_z: 1
+  hidden_dim: 32
+  epochs: 120
+  lr: 0.0001
+  batch_size: 64
+  predict_samples: 1
+  beta_z: 10.0
+  beta_y: 0.1
+  recon_factor: 1.0
+  warmup: 0
+  optimizer_step_size: 40
+  optimizer_gamma: 0.5
+  reorder_probability: 0.5
+  clip_gradient: true
+  no_relu: false
+holdout_cal_frac: 0.15
+holdout_test_frac: 0.15
+restore_best_model: true
+calendar_config: configs/tables/calendar.yaml
+prior_mode: contextual
+gain_mode: learned
+conformal_scheme: cyclic
+conformal_score_space: raw_absolute
+anchor_selection: configured

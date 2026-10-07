@@ -1,0 +1,33 @@
+# Toy spatial experiment (paper §4.1, Tables 1–2).
+data_path: data/toy_spatial/toy_data.csv
+obs_transform: none
+point_prediction_summary: median
+
+model: anchored
+offset_parameterization: mean_residual
+anchor_idx: 0
+seed: 42
+
+epochs: 100
+patience: 40
+batch_size: 1024
+shuffle_train: true
+lr: 4.0e-5
+weight_decay: 0.0
+warmup_epochs: 0
+scheduler_min_lr: 1.0e-7
+grad_clip_norm: 0.0
+var_reg_weight: 0.0
+
+hidden_dim: 128
+prior_hidden_dim: 128
+rel_hidden_dim: 128
+bias_hidden_dim: 64
+
+alpha: 0.1
+sigma_y: 0.001
+n_splits: 100
+
+val_size: 0.2
+test_size: 0.2
+cv_test_size: 0.5

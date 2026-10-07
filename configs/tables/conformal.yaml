@@ -1,0 +1,14 @@
+alpha: 0.2
+datasets:
+  cairsense:
+    window_timestamps: 72
+    block_size: 1
+    scheme: cyclic
+  seneurcity:
+    window_timestamps: 48
+    block_size: 6
+    scheme: nob
+    sensor_overrides:
+      OPCN3PM25:
+        window_timestamps: 0
+        block_size: 4

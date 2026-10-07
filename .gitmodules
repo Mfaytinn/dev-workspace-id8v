@@ -1,0 +1,6 @@
+[submodule "third_party/veli"]
+	path = third_party/veli
+	url = https://github.com/YahiDar/Veli.git
+[submodule "third_party/airsenseur-calibration"]
+	path = third_party/airsenseur-calibration
+	url = https://github.com/ec-jrc/airsenseur-calibration

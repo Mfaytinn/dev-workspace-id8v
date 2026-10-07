@@ -1,0 +1,32 @@
+{
+  "training_sensors": "all three; frozen Table 2 reference checkpoints",
+  "fusion_sensors": "exclude calibration sensor on both calibration and test",
+  "surrogate": "uncorrected raw sensor reading",
+  "score": "abs(raw_sensor_reading - raw_posterior_median) / raw_predictive_spread",
+  "temporal_settings": "inherit frozen block/window/scheme; normalized raw-space sensor score",
+  "coverage_sensor_row": "uncorrected sensor reading in raw interval",
+  "coverage_raw_sensor_row": "unadjusted sensor reading in raw interval",
+  "coverage_reference_row": "reference label in raw interval",
+  "aggregation": "pool calendar rows within seed; average Toy partitions; seed mean/std",
+  "alpha": 0.2,
+  "seeds": [
+    0,
+    1,
+    42
+  ],
+  "reserved_holdout_evaluated": false,
+  "calibration_settings_retuned": false,
+  "reference_labels_used_for_tuning": false,
+  "heldout_calibration_target": "raw_sensor",
+  "heldout_sensor_correction_applied": false,
+  "raw_sensor_settings_retuned": false,
+  "raw_scale": "posterior",
+  "raw_scale_definition": "half raw predictive quantile span at Phi(-1), Phi(1); fixed floor 1e-8; sensor variance = gain^2 * posterior_variance + learned_sensor_variance; posterior scale excludes sigma_y",
+  "adaptive_scale_selected": true,
+  "adaptive_scale_selection": "user chose posterior after sensor-only development comparison",
+  "temporal_validity": "requires suitable dependence/invariance assumptions",
+  "point_prediction_summary": "median",
+  "heldout_profile": null,
+  "temporal_profile": "configs/tables/conformal.yaml",
+  "historical_absolute_raw_results": "historical_absolute_raw"
+}
